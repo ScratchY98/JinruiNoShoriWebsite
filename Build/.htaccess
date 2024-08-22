@@ -1,3 +1,3 @@
-{IfModule mod_mime.c}
+<IfModule mod_mime.c>
   AddType application/wasm .wasm
-{/IfModule}
+</IfModule>
