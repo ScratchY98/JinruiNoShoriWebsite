@@ -33,6 +33,7 @@
 
         nav ul li {
             margin: 0;
+            display: list-item;
         }
 
             nav ul li a {
