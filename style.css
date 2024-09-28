@@ -47,7 +47,7 @@
         }
 
         .hero {
-            background-image: url('https://example.com/jinruinoshori-hero.jpg');
+            background-image: url('https://jinruinoshori.netlify.app/background.jpg');
             background-size: cover;
             background-position: center;
             height: 400px;
