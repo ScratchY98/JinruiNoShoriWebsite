@@ -34,6 +34,7 @@
                 list-style-type: none;
                 display: flex;
                 justify-content: center;
+                flex-wrap: wrap; /* Wrap the menu on smaller screens */
             }
 
                 nav ul li {
@@ -62,6 +63,7 @@
             justify-content: center;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            text-align: center; /* Center text for better readability on mobile */
         }
 
             .hero h1 {
@@ -124,6 +126,59 @@
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px; /* Reduce hero section height on tablets */
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack the navigation links vertically */
+            }
+
+            nav ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            main {
+                padding: 0 0.5rem; /* Reduce side padding on smaller screens */
+            }
+
+            .cta {
+                padding: 1.5rem; /* Adjust CTA padding */
+            }
+
+            .features {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid on tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 200px; /* Reduce hero section height further on mobile */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.75rem 1rem; /* Adjust button size on mobile */
+            }
+
+            .features {
+                grid-template-columns: 1fr; /* Single column grid on small screens */
+            }
+
+            .section h2 {
+                font-size: 1.5rem; /* Smaller section titles on mobile */
+            }
         }
     </style>
 
