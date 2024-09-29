@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   progressBars.forEach(bar => {
-    bar.style.width = '10%';
     bar.parentElement.dataset.progress = bar.style.width;
     observer.observe(bar);
   });
