@@ -151,6 +151,7 @@
        flex: auto;
        flex: initial;
        flex: none;
+       flex: 1
    }
 
        .cta-button:hover {
