@@ -1,0 +1,123 @@
+<html><head><base href="https://jinruinoshori.netlify.app/">
+<title>Jinrui no Shōri</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Jinrui no Shōri</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Current Features</a></li>
+    <li><a href="#roadmap">Development Roadmap</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <section id="about">
+    <h2>About the Game</h2>
+    <p>Jinrui no Shōri (Victory of Humanity in Japanese) is an exciting game inspired by the Attack on Titan (SNK) manga. Developed by a solo developer in his spare time, this fan game brings the bloody world of the titans to life.</p>
+    <p>Currently in beta, Jinrui no Shōri offers an incredible gameplay experience in which players use three-dimensional equipment to take down massive titans. Although the game is still in development with some bugs, simple gameplay and terrible UI, it promises an immersive and challenging adventure for fans of the genre.</p>
+  </section>
+
+  <section id="features">
+    <h2>Current Features</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <div class="feature-icon">🎮</div>
+            <h3>ODM Gear Mechanics</h3>
+            <p>Navigate the world with custom-made 3D maneuvering gear, adding a layer of complexity to titan slaying.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🗺️</div>
+            <h3> Map choice</h3>
+            <p>With several maps at your disposal, take advantage of numerous places to slaughter titans.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">⚔️</div>
+            <h3>Titan Combat</h3>
+            <p>Face off against towering titans in intense battles, testing your skills and strategy.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">👥</div>
+            <h3>Character Customization</h3>
+            <p>Create your own character, with their skin tone, hair color and even their clothes personalized to your tastes.</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2>Development Roadmap</h2>
+    <div class="roadmap-grid">
+        <div class="roadmap-item">
+            <div class="roadmap-icon">🗺️</div>
+            <h3>News Maps</h3>
+            <p>Add new maps to improve exploration.</p>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">🤝</div>
+            <h3>Multiplayer Mode</h3>
+            <p>Cooperative missions and PvP Titan vs. Scout battles.</p>
+            <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">⚙️</div>
+            <h3>Best ODM Gear</h3>
+            <p>Multiple narrative paths with significant consequences based on player choices.</p>
+            <div class="progress-bar"><div class="progress" style="width: 45%;"></div></div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">🔧</div>
+            <h3>Best Menu and UI</h3>
+            <p>Improve the menu and UI to make the game more accessible and enjoyable.</p>
+            <div class="progress-bar"><div class="progress" style="width: 45%;"></div></div>
+        </div>
+        <div class="roadmap-item">
+            <div class="roadmap-icon">🔧</div>
+            <h3>Fix bug</h3>
+            <p>We all hate bugs ...</p>
+            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+    </div>
+  </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+      window.scrollTo({
+        top: targetElement.offsetTop - 60,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  const progressBars = document.querySelectorAll('.progress');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.parentElement.dataset.progress;
+      }
+    });
+  }, { threshold: 0.5 });
+
+  progressBars.forEach(bar => {
+    bar.style.width = '0%';
+    bar.parentElement.dataset.progress = bar.style.width;
+    observer.observe(bar);
+  });
+});
+</script>
+</body>
+</html>
