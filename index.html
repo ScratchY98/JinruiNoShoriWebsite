@@ -80,7 +80,7 @@
         <div class="roadmap-item">
             <div class="roadmap-icon">🔧</div>
             <h3>Fix bug</h3>
-            <p>We all hate bugs ...</p>
+            <p>We ALL hate bugs ...</p>
             <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
         </div>
     </div>
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   progressBars.forEach(bar => {
-    bar.style.width = '0%';
+    bar.style.width = '10%';
     bar.parentElement.dataset.progress = bar.style.width;
     observer.observe(bar);
   });
