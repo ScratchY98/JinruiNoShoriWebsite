@@ -1,4 +1,4 @@
-# ScratchY98.github.io
+# JinruiNoShoriWebsite
 
 An website for my game Jirui no shõri.
 
