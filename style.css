@@ -1,4 +1,4 @@
- body, html {
+html {
    margin: 0;
    padding: 0;
    font-family: 'Roboto', sans-serif;
@@ -136,24 +136,25 @@
    }
 
 
-   .cta-button {
-       display: inline-block;
-       background-color: #676464;
-       ;
-       color: white;
-       text-decoration: none;
-       padding: 1rem 2rem;
-       border-radius: 4px;
-       font-weight: 600;
-       transition: background-color 0.3s ease;
-       animation: pulseButton 1.5s infinite;
+.cta-button {
+    display: inline-block;
+    background-color: #676464;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    animation: pulseButton 1.5s infinite;
+    margin: 0px 80px;
+}
 
-       flex: auto;
-       flex: initial;
-       flex: none;
-       flex: 10em;
-       flex: 30px;
-   }
+@media (max-width: 800px) { 
+    .cta-button {
+        display: block;
+        margin: 30px 0px;
+    }
+}
 
        .cta-button:hover {
            background-color: #9D9393;
